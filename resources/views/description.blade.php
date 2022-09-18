@@ -6,7 +6,12 @@
 
         <div class="mt-3">
             <h2 class="sr-only">Product information</h2>
-            <p class="text-3xl tracking-tight text-gray-900">{{ $thecar->price }}</p>
+            <p class="text-3xl tracking-tight text-gray-900">
+                <?php
+                $formatPrice = new NumberFormatter('de_DE', NumberFormatter::CURRENCY);
+                echo $formatPrice->formatCurrency($thecar->price, 'EUR') . "\n";
+                ?>
+            </p>
         </div>
 
         <div class="mt-3 prose lg:max-w-[80ch]">

@@ -95,7 +95,13 @@
                 <div class="px-6 py-8 text-center bg-gray-50 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12"
                     style="cursor: auto;">
                     <div class="flex items-center justify-center mt-4 text-3xl font-extrabold text-gray-900">
-                        <span>{{ $thecar->price }}</span>
+                        <span>
+                            <?php
+                            $formatPrice = new NumberFormatter('de_DE', NumberFormatter::CURRENCY);
+                            echo $formatPrice->formatCurrency($thecar->price, 'EUR') . "\n";
+                            ?>
+                        </span>
+
                     </div>
                     <div class="mt-6">
                         <div class="rounded-md shadow">

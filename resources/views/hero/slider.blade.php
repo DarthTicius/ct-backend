@@ -1,0 +1,81 @@
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <ul class="swiper-wrapper my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+        <!-- Slides -->
+        {{-- {{ $carimages }} --}}
+        @foreach ($carimages as $key => $imgurl)
+            {{-- {{ $imgurl['url'] }} --}}
+            <li id={{ $key }} class="swiper-slide" itemprop="associatedMedia" itemscope
+                itemtype="http://schema.org/ImageObject">
+                <a id="first" title="click to zoom-in" href="{{ $imgurl['url'] }}" itemprop="contentUrl"
+                    data-size="1200x800">
+                    <img src="{{ $imgurl['url'] }}" itemprop="thumbnail" alt="Image description"
+                        class="object-cover max-h-[400px] max-w-full h-[400px] w-full rounded-2xl" />
+                </a>
+            </li>
+        @endforeach
+    </ul>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div title="Prev" class="swiper-button-prev"></div>
+    <div title="Next" class="swiper-button-next"></div>
+</div>
+
+<!-- https://photoswipe.com/documentation/getting-started.html -->
+<!-- add PhotoSwipe (.pswp) element to DOM -
+ Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+   It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>

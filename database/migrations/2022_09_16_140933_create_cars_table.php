@@ -16,10 +16,9 @@ return new class extends Migration
 	{
 		Schema::create('cars', function (Blueprint $table) {
 			$table->id();
-
-			$table->string('uid')->nullable();
+			$table->boolean('uid')->nullable()->default(false);
 			$table->string('detailUrl');
-			$table->string('importId')->nullable()->default(null);
+			$table->string('importId')->nullable()->default(false);
 			$table->boolean('hasChanges')->nullable()->default(false);
 			$table->json('car')->nullable();
 

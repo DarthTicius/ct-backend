@@ -1,0 +1,15 @@
+.swiper-pagination {
+    @apply h-[5px] flex;
+    .swiper-pagination-bullet {
+        @apply text-white bg-white w-full rounded-none h-[5px] opacity-70;
+        &.swiper-pagination-bullet-active {
+            @apply text-white bg-black opacity-100;
+        }
+    }
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    @apply text-green-500;
+}

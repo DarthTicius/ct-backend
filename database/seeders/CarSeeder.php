@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Car;
-use File;
+use Illuminate\Support\Facades\File;
 
 class CarSeeder extends Seeder
 {
@@ -19,7 +19,7 @@ class CarSeeder extends Seeder
 		Car::truncate();
 
 		$json = File::get('database/data/car.json');
-		// ::get("database/data/car.json");
+
 		$cars = json_decode($json);
 		foreach ($cars as $key => $value) {
 

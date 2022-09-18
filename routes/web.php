@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\FileController;
+use App\Http\Controllers\CarController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return ['Laravel' => app()->version()];
-});
 
-require __DIR__.'/auth.php';
+Route::get('/', [CarController::class, "show"]);
+// Route::get('/', function () {
+// 	return view('welcome');
+// });
+// get file from api by visiting create-file page
+Route::get("/create-file", [FileController::class, "CheckAndCreate"]);

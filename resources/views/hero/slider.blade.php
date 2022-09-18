@@ -2,9 +2,8 @@
     <!-- Additional required wrapper -->
     <ul class="swiper-wrapper my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
         <!-- Slides -->
-        {{-- {{ $carimages }} --}}
+
         @foreach ($carimages as $key => $imgurl)
-            {{-- {{ $imgurl['url'] }} --}}
             <li id={{ $key }} class="swiper-slide" itemprop="associatedMedia" itemscope
                 itemtype="http://schema.org/ImageObject">
                 <a id="first" title="click to zoom-in" href="{{ $imgurl['url'] }}" itemprop="contentUrl"

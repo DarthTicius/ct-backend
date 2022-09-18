@@ -1,6 +1,6 @@
 <div class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between gap-8 mt-20">
     <div
-        class="max-w-sm w-full lg:w-sm  relative bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        class="max-w-lg w-full lg:w-sm  relative bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <div class="relative max-h-[200px] h-[200px] overflow-hidden ">
             <img class="h-full w-full object-cover object-center absolute" src={{ $thecar->standardImages[0]['url'] }}
                 alt="" />
@@ -25,7 +25,7 @@
         </div>
     </div>
     <div
-        class="max-w-sm w-full lg:w-sm  relative bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        class="max-w-lg w-full lg:w-sm  relative bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <div class="relative max-h-[200px] h-[200px] overflow-hidden ">
             <img class="h-full w-full object-cover object-center absolute" src={{ $thecar->standardImages[0]['url'] }}
                 alt="" />
@@ -50,7 +50,7 @@
         </div>
     </div>
     <div
-        class="max-w-sm w-full lg:w-sm  relative bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        class="max-w-lg w-full lg:w-sm  relative bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <div class="relative max-h-[200px] h-[200px] overflow-hidden ">
             <img class="h-full w-full object-cover object-center absolute" src={{ $thecar->standardImages[0]['url'] }}
                 alt="" />
@@ -75,7 +75,7 @@
         </div>
     </div>
     <div
-        class="max-w-sm w-full lg:w-sm  relative bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        class="max-w-lg w-full lg:w-sm  relative bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <div class="relative max-h-[200px] h-[200px] overflow-hidden ">
             <img class="h-full w-full object-cover object-center absolute" src={{ $thecar->standardImages[0]['url'] }}
                 alt="" />

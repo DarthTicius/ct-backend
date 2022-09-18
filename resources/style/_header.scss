@@ -1,0 +1,24 @@
+.backdop_menu {
+    @apply transition-opacity ease-linear duration-300 opacity-0 z-0;
+    &.is_open {
+        @apply transition-opacity ease-linear duration-300 opacity-100 z-40;
+    }
+    .backdrop_bg {
+        &.is_open {
+        }
+    }
+    .backdrop_nav_wrapper {
+        &.is_open {
+        }
+    }
+}
+.nav_btn_wrapper {
+    // &.is_active {
+    .nav_btn_data {
+        @apply transition ease-out duration-200 opacity-0;
+        &.is_active {
+            @apply transition ease-in duration-200 opacity-100;
+        }
+    }
+    // }
+}

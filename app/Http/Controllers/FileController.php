@@ -16,7 +16,7 @@ class FileController extends Controller
 		if ($content_dec->data) {
 			$prep = json_encode(array($content_dec->data));
 		}
-		// dd($prep);
+
 
 		if (!File::exists($storePath)) {
 			File::replace($storePath, $prep);
